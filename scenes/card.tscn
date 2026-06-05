@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dslgdwwds21pk"]
+
+[ext_resource type="Script" uid="uid://00e73bienfoy" path="res://scenes/card.gd" id="1_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://ddij41jxlx3gb" path="res://assets/card_assets/slice90.png" id="1_d81rb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u4wf"]
+size = Vector2(204, 287)
+
+[node name="card" type="Node2D"]
+script = ExtResource("1_6u4wf")
+
+[node name="cardImage" type="Sprite2D" parent="."]
+position = Vector2(68, 38)
+texture = ExtResource("1_d81rb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(67, 48.5)
+shape = SubResource("RectangleShape2D_6u4wf")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
