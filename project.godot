@@ -14,3 +14,8 @@ config/name="Mikris card game"
 run/main_scene="uid://btsqpb0i0ve7m"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080

@@ -10,13 +10,14 @@ size = Vector2(204, 287)
 script = ExtResource("1_6u4wf")
 
 [node name="cardImage" type="Sprite2D" parent="."]
-position = Vector2(68, 38)
+position = Vector2(-1, 0)
 texture = ExtResource("1_d81rb")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(68, 50)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(67, 48.5)
+position = Vector2(-68, -49)
 shape = SubResource("RectangleShape2D_6u4wf")
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
